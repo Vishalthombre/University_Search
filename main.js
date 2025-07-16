@@ -10,9 +10,8 @@ btn.addEventListener("click", async () => {
   }
   ul.innerHTML = "";
 
-  // Use allorigins.win proxy for better HTTPS and CORS handling
   const apiUrl = `https://universities.hipolabs.com/search?country=India`;
-  const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
+  const proxyUrl = `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(apiUrl)}`;
 
   try {
     let res = await axios.get(proxyUrl);
